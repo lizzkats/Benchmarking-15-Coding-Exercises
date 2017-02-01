@@ -16,7 +16,7 @@ const rl = readline.createInterface({
 
 rl.question('Enter a random number between 1-100 ', answer => {
   console.log('You entered: ' + answer)
-  var randomNum = getRandomNumber(0,100)
+  const randomNum = getRandomNumber(0,100)
   console.log('The number was ' + randomNum)
   if(randomNum === answer){
     console.log('WINNER!!')
@@ -30,7 +30,7 @@ rl.question('type "exit" to close ', answer => {
   if(answer === 'exit'){
     rl.close();
   }
-  
+
 })
 });
 
