@@ -13,19 +13,24 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-rl.question('Enter a random number between 1-100 ', (answer) => {
+
+rl.question('Enter a random number between 1-100 ', answer => {
   console.log('You entered: ' + answer)
   var randomNum = getRandomNumber(0,100)
   console.log('The number was ' + randomNum)
   if(randomNum === answer){
     console.log('WINNER!!')
-  } else {
-    console.log('Try again!')
+  } else if (randomNum < answer) {
+    console.log('Your number was too high.')
+  } else if(randomNum > answer){
+    console.log('Your number was too low!')
   }
-rl.question('type "exit" to close', (answer) =>{
+
+rl.question('type "exit" to close ', answer => {
   if(answer === 'exit'){
     rl.close();
   }
+  
 })
 });
 
