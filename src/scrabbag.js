@@ -1,12 +1,4 @@
-//input a string
-//split string into an array
-//iterate over the array
-//for each letter and subtract one
-//MAKE THE STRING UPPERCASE
-
-
-
-function scrabbleRemainder(input){
+export default function scrabbleRemainder(input){
   let scrabbleBag = {
     A: 9,
     B: 2,
@@ -45,4 +37,3 @@ let toArray= input.toUpperCase().split('')
   }
 return scrabbleBag
 }
-scrabbleRemainder('kgdfbgfg')

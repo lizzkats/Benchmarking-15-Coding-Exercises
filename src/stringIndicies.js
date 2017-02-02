@@ -1,11 +1,8 @@
-function stringIndicies(input, index){
+export default function stringIndicies(input, index){
   let toArray = input.split(' ')
   if(index >= toArray.length){
-    console.log(' "" ')
-  } else {
-    console.log(stringIndex = toArray[index - 1]
+    return ""
   }
+    let stringIndex = toArray[index - 1]
+    return stringIndex
 }
-stringIndicies('CASH ME OUSSIDE HOWBOW DAH', 7)
-
-module.exports = {stringIndicies}
