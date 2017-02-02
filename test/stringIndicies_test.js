@@ -1,11 +1,10 @@
-var expect = require('chai')
-var guessTheNumber = require('../src/stringIndicies.js')
-//This still isn't working
+import {expect} from 'chai'
+import stringIndicies from '../src/stringIndicies.js'
   describe('stringIndicies', function(){
     it('should return the string in the sentence found at that index', function(){
-      expect(stringIndicies('cash me outside how about that', 0)).to.equal('cash')
+      expect(stringIndicies('cash me outside how about that', 1)).to.equal('cash')
       })
-      it('should return an array with numbers from 1-100', function(){
+      it('should return an empty string if the location does not exist in the sentence', function(){
         expect(stringIndicies('I dont actually exist', 7)).to.equal('')
         })
     })
